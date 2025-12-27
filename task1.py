@@ -1,8 +1,10 @@
-try :
-    fh = open('sample.txt', "rt")
-    print("Readings of a file :")
-    print(f"This is line 1 {fh.readline()}")
-    print(f"This is line 2 {fh.readline()}")
-    fh.close()
+try:
+  fh = open('sample.txt', "rt")
+  print("Readings of a file :")
+  i=1
+  for j in fh.readlines():
+    print(f"This is line {i} {j}")
+    i=i+1
+  fh.close()
 except FileNotFoundError as ferr :
-    print(ferr)
+ print(ferr)
